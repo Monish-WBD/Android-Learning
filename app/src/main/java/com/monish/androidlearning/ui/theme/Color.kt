@@ -4,11 +4,11 @@ import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.ui.graphics.Color
 
-private val Blue = Color(0xFF1F4B99)
+internal val Blue = Color(0xFF1F4B99)
 private val BlueDark = Color(0xFFB7C9FF)
-private val Teal = Color(0xFF0F766E)
+internal val Teal = Color(0xFF0F766E)
 private val TealDark = Color(0xFF8ED8D0)
-private val Amber = Color(0xFFB45309)
+internal val Amber = Color(0xFFB45309)
 private val AmberDark = Color(0xFFFFC08A)
 private val Ink = Color(0xFF1B1C22)
 private val Paper = Color(0xFFF6F7FB)

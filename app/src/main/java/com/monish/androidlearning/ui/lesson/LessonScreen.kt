@@ -37,6 +37,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import com.monish.androidlearning.model.lessonById
+import com.monish.androidlearning.ui.theme.Amber
+import com.monish.androidlearning.ui.theme.Blue
+import com.monish.androidlearning.ui.theme.Teal
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -196,9 +199,9 @@ private fun LayoutDemo() {
                     .fillMaxWidth()
                     .padding(vertical = 28.dp),
             ) {
-                DemoBlock("A", Color(0xFF1F4B99), Modifier.align(Alignment.CenterStart))
-                DemoBlock("B", Color(0xFF0F766E), Modifier.align(Alignment.Center))
-                DemoBlock("C", Color(0xFFB45309), Modifier.align(Alignment.CenterEnd))
+                DemoBlock("A", Blue, Modifier.align(Alignment.CenterStart))
+                DemoBlock("B", Teal, Modifier.align(Alignment.Center))
+                DemoBlock("C", Amber, Modifier.align(Alignment.CenterEnd))
             }
         }
     }
@@ -206,9 +209,9 @@ private fun LayoutDemo() {
 
 @Composable
 private fun LayoutBlocks() {
-    DemoBlock("A", Color(0xFF1F4B99))
-    DemoBlock("B", Color(0xFF0F766E))
-    DemoBlock("C", Color(0xFFB45309))
+    DemoBlock("A", Blue)
+    DemoBlock("B", Teal)
+    DemoBlock("C", Amber)
 }
 
 @Composable

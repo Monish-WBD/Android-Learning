@@ -5,17 +5,19 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-import androidx.navigation.NavType
 import com.monish.androidlearning.ui.home.HomeScreen
 import com.monish.androidlearning.ui.lesson.LessonScreen
 import com.monish.androidlearning.ui.theme.AndroidLearningTheme
 
 private const val HomeRoute = "home"
 private const val LessonRoute = "lesson/{lessonId}"
+
+private fun lessonRoute(lessonId: String) = "lesson/$lessonId"
 
 @Composable
 fun AndroidLearningApp() {
@@ -30,7 +32,7 @@ fun AndroidLearningApp() {
             composable(HomeRoute) {
                 HomeScreen(
                     onOpenLesson = { lessonId ->
-                        navController.navigate("lesson/$lessonId")
+                        navController.navigate(lessonRoute(lessonId))
                     },
                 )
             }
